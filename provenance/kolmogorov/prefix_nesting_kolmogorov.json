@@ -1,0 +1,42 @@
+{
+ "checkpoint": "${DATA_ROOT}/kolmogorov/re100/results/coupling_fine_D512/coupling_D512_best.pt",
+ "K": 512,
+ "rows": [
+  {
+   "stored_rank": 32,
+   "reported_D": 16,
+   "prefix_raw": 0.3570966164104951,
+   "prefix_varordered": 0.3571418069265777,
+   "energy_frac": 0.7746584112274842
+  },
+  {
+   "stored_rank": 64,
+   "reported_D": 32,
+   "prefix_raw": 0.19128424317569037,
+   "prefix_varordered": 0.18955347166882833,
+   "energy_frac": 0.9068248838465753
+  },
+  {
+   "stored_rank": 128,
+   "reported_D": 64,
+   "prefix_raw": 0.07379516019637368,
+   "prefix_varordered": 0.07425189368137337,
+   "energy_frac": 0.9725176915581206
+  },
+  {
+   "stored_rank": 256,
+   "reported_D": 128,
+   "prefix_raw": 0.018118321230281453,
+   "prefix_varordered": 0.01818751279891191,
+   "energy_frac": 0.9946734673832196
+  },
+  {
+   "stored_rank": 512,
+   "reported_D": 256,
+   "prefix_raw": 0.0015153678016124068,
+   "prefix_varordered": 0.0015153695200166035,
+   "energy_frac": 1.0
+  }
+ ],
+ "raw_column_variance_inversions": 201
+}

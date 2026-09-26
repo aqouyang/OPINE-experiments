@@ -1,0 +1,66 @@
+{
+  "n_trajectories": 100,
+  "10_finite_and_shapes": {
+    "pass": true,
+    "nonfinite_values": 0,
+    "shapes": [
+      [
+        1000,
+        128,
+        128
+      ]
+    ],
+    "dtypes": [
+      "float32"
+    ]
+  },
+  "4_mean_and_rms_vorticity": {
+    "pass": true,
+    "mean_vorticity": -1.8961728021071877e-10,
+    "rms_vorticity": 2.9841010570526123,
+    "rms_vorticity_from_D": 2.9841010577338936
+  },
+  "7_mean_vorticity_near_zero": {
+    "pass": true,
+    "mean": -1.8961728021071877e-10,
+    "relative_to_rms": 6.354251299987917e-11,
+    "max_abs_per_snapshot": 1.1102230246251565e-14
+  },
+  "6_stationary_after_burn_in": {
+    "pass": true,
+    "D_first_half_mean": 0.08906243254801921,
+    "D_second_half_mean": 0.08903474990735162,
+    "D_half_diff_in_sem": 0.048256581508078926,
+    "E_first_half_mean": 1.8818896126290872,
+    "E_second_half_mean": 1.8814181757304125,
+    "E_half_diff_in_sem": 0.08783647815438833,
+    "integral_correlation_time_D": 9.653172814045094,
+    "integral_correlation_time_E": 36.14609407919624,
+    "D_std_ratio_first_over_second_half": 0.9946116449985913,
+    "D_linear_drift_over_window": -0.0005620455435218593,
+    "D_std": 0.002823831757131503,
+    "_test": "split-half means compared against the standard error of the mean with the integral correlation time folded in, plus a check that the fluctuation level is not inflated in the first half (the transient signature)"
+  },
+  "8_spectrum_decayed_before_cutoff": {
+    "pass": true,
+    "E(k_dealias)/E_peak": 1.6185139102881558e-10,
+    "E(k_nyquist)/E_peak": 7.731348248620967e-20,
+    "k_dealias": 42,
+    "k_nyquist": 64
+  },
+  "9_snapshot_spacing_is_one_time_unit": {
+    "pass": true,
+    "relative_error_reintegrating_one_interval": [
+      5.371584511265233e-08,
+      5.112360555153193e-08
+    ],
+    "steps_per_snapshot": 512,
+    "dt": 0.001953125,
+    "note": "re-integrating a saved snapshot by exactly steps_per_snapshot must reproduce the next saved one"
+  },
+  "_summary": {
+    "failures": [],
+    "all_passed": true,
+    "snapshots_total": 100000
+  }
+}

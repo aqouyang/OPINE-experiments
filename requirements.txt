@@ -1,0 +1,14 @@
+# Versions are the ones the reported runs used.
+torch==2.7.1
+numpy>=1.24
+matplotlib>=3.7
+scipy>=1.10
+
+# 3-D isosurface and Q-criterion figures only
+pyvista==0.49.0
+
+# Kolmogorov dataset generation only (not needed to reproduce results from
+# an existing dataset)
+# jax==0.10.2
+# jaxlib==0.10.2
+# jax-cfd==0.2.1

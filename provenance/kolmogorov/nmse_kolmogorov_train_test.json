@@ -1,0 +1,189 @@
+{
+ "_metric": "canonical NMSE = sum|recon-truth|^2/sum|truth|^2",
+ "_split": "trajectory-level 80/10/10; test = 10,000 snapshots",
+ "_sigma_train": 2.985538537089975,
+ "_grid": "128 x 128 vorticity, periodic in x and y",
+ "_excluded": [
+  "Original FINE",
+  "iResNet FINE",
+  "PODxTE / PODxC4 (discontinued symmetry line, flagged do-not-cite in canonical/README.md)"
+ ],
+ "_pod_definition": "POD means the unrestricted global POD, which is the live Kolmogorov POD and the OPINE round-0 bottleneck.  The symmetry-constrained PODxTE / PODxC4 line is discontinued and is not used.  POD is plotted on test only.",
+ "_dimension_convention": {
+  "POD": "reported D = retained real rank",
+  "OPINE": "reported D = retained real rank",
+  "CNN": "reported D = latent dimension",
+  "_why": "the retained real dimension is reported directly for every method.  The earlier D = stored rank / 2 mode-pair convention is withdrawn: the pairing is enforced by construction only in the banded y-z bottleneck, and elsewhere it is a finite-sample property of the empirical covariance rather than a guaranteed one, which is not a sufficient basis for halving a reported dimension."
+ },
+ "_sources": {
+  "POD": "kolmogorov/results/canonical/pod_ext/pod_results.json",
+  "CNN": "canonical/comparison_table.json",
+  "OPINE": [
+   "{root}/diagnostics/coupling_all/coupling_fine_D{D}/coupling_D{D}_results.json",
+   "{root}/diagnostics/coupling_D{D}/coupling_D{D}_results.json",
+   "{root}/diagnostics/coupling_fine_D{D}/coupling_D{D}_results.json"
+  ]
+ },
+ "rows": [
+  {
+   "dof": 16,
+   "CNN": {
+    "train": 0.18702770247799275,
+    "val": null,
+    "test": 0.21594233215355568,
+    "n_params": 1326833,
+    "best_epoch": 30,
+    "source": "kolmogorov/results/canonical/cnn_d16/cnn_results_live.json"
+   }
+  },
+  {
+   "dof": 32,
+   "POD": {
+    "train": 0.3555234540799963,
+    "val": 0.3574414117604371,
+    "test": 0.35804216617047324,
+    "n_params": 0,
+    "variant": "unrestricted global POD (the POD baseline); exact eigh of the 16384^2 spatial covariance",
+    "captured_energy": 0.6339868534760842,
+    "source": "kolmogorov/results/canonical/pod_ext/pod_results.json",
+    "frozen_table_test": 0.35804216617047335,
+    "frozen_table_delta": -1.1102230246251565e-16
+   },
+   "CNN": {
+    "train": 0.10173678861577845,
+    "val": null,
+    "test": 0.12067115379348656,
+    "n_params": 1851137,
+    "_train_note": "test - generalization_gap, which train_cnn.py defines as test-train"
+   },
+   "OPINE": {
+    "train": 0.2087443899207298,
+    "val": 0.20893974608557073,
+    "test": 0.20884325952800703,
+    "n_params": 61760,
+    "best_round": 24,
+    "alpha": 0.03,
+    "source": "kolmogorov/results/diagnostics/coupling_all/coupling_fine_D32/coupling_D32_results.json"
+   }
+  },
+  {
+   "dof": 64,
+   "POD": {
+    "train": 0.1939348269752397,
+    "val": 0.19495935045537655,
+    "test": 0.19478504732258667,
+    "n_params": 0,
+    "variant": "unrestricted global POD (the POD baseline); exact eigh of the 16384^2 spatial covariance",
+    "captured_energy": 0.8003431407205979,
+    "source": "kolmogorov/results/canonical/pod_ext/pod_results.json",
+    "frozen_table_test": 0.19478504732258667,
+    "frozen_table_delta": 0.0
+   },
+   "CNN": {
+    "train": 0.050560282136603595,
+    "val": null,
+    "test": 0.062127758279561754,
+    "n_params": 2899745,
+    "_train_note": "test - generalization_gap, which train_cnn.py defines as test-train"
+   },
+   "OPINE": {
+    "train": 0.10793466824238397,
+    "val": 0.10834035013680672,
+    "test": 0.10815082713757126,
+    "n_params": 61760,
+    "best_round": 21,
+    "alpha": 0.03,
+    "source": "kolmogorov/results/diagnostics/coupling_D64/coupling_D64_results.json"
+   }
+  },
+  {
+   "dof": 128,
+   "POD": {
+    "train": 0.07963059198659914,
+    "val": 0.08019233585184728,
+    "test": 0.08040713544473581,
+    "n_params": 0,
+    "variant": "unrestricted global POD (the POD baseline); exact eigh of the 16384^2 spatial covariance",
+    "captured_energy": 0.9180199134597359,
+    "source": "kolmogorov/results/canonical/pod_ext/pod_results.json",
+    "frozen_table_test": 0.08040713544473582,
+    "frozen_table_delta": -1.3877787807814457e-17
+   },
+   "CNN": {
+    "train": 0.020634580492719816,
+    "val": null,
+    "test": 0.027428327226814285,
+    "n_params": 4996961,
+    "_train_note": "test - generalization_gap, which train_cnn.py defines as test-train"
+   },
+   "OPINE": {
+    "train": 0.03382440226793014,
+    "val": 0.03394226468619326,
+    "test": 0.03404110256534168,
+    "n_params": 61760,
+    "best_round": 23,
+    "alpha": 0.03,
+    "source": "kolmogorov/results/diagnostics/coupling_all/coupling_fine_D128/coupling_D128_results.json"
+   }
+  },
+  {
+   "dof": 256,
+   "POD": {
+    "train": 0.025703618978632922,
+    "val": 0.02598908561344803,
+    "test": 0.026079239661211374,
+    "n_params": 0,
+    "variant": "unrestricted global POD (the POD baseline); exact eigh of the 16384^2 spatial covariance",
+    "captured_energy": 0.973537997700433,
+    "source": "kolmogorov/results/canonical/pod_ext/pod_results.json",
+    "frozen_table_test": 0.026079239661211367,
+    "frozen_table_delta": 6.938893903907228e-18
+   },
+   "CNN": {
+    "train": 0.005612615307017395,
+    "val": null,
+    "test": 0.00899915098494081,
+    "n_params": 9191393,
+    "_train_note": "test - generalization_gap, which train_cnn.py defines as test-train"
+   },
+   "OPINE": {
+    "train": 0.009150811693441877,
+    "val": 0.009221048737130656,
+    "test": 0.009232012693138005,
+    "n_params": 61760,
+    "best_round": 24,
+    "alpha": 0.03,
+    "source": "kolmogorov/results/diagnostics/coupling_all/coupling_fine_D256/coupling_D256_results.json"
+   }
+  },
+  {
+   "dof": 512,
+   "POD": {
+    "train": 0.005988305012896097,
+    "val": 0.006095548539582008,
+    "test": 0.006103442927138871,
+    "n_params": 0,
+    "variant": "unrestricted global POD (the POD baseline); exact eigh of the 16384^2 spatial covariance",
+    "captured_energy": 0.9938350105036533,
+    "source": "kolmogorov/results/canonical/pod_ext/pod_results.json"
+   },
+   "CNN": {
+    "train": 0.0021438067077381878,
+    "val": null,
+    "test": 0.003467699977801336,
+    "n_params": 17580257,
+    "best_epoch": 30,
+    "source": "kolmogorov/results/canonical/cnn_d16/cnn_results_live.json"
+   },
+   "OPINE": {
+    "train": 0.0014927159943681077,
+    "val": 0.0015165628288523162,
+    "test": 0.0015153701057194601,
+    "n_params": 61760,
+    "best_round": 25,
+    "alpha": 0.03,
+    "source": "kolmogorov/results/diagnostics/coupling_fine_D512/coupling_D512_results.json"
+   }
+  }
+ ]
+}

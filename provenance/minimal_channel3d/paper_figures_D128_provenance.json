@@ -1,0 +1,151 @@
+{
+ "source_npz": "minimal_channel3d/figures_real/recon3d_D128_snapshot1287.npz",
+ "dof": 128,
+ "_dof_is": "the RETAINED dimension the summary figure plots; stored_rank below says what each method actually holds, which differs for POD and OPINE because their modes come in pairs",
+ "stored_rank": {
+  "pod": 128,
+  "opine": 128,
+  "cnn": 128
+ },
+ "pair_divisor": 1,
+ "snapshot_index": 1287,
+ "opine_variant": "C",
+ "nmse_snapshot": {
+  "POD": 0.505234956741333,
+  "CNN": 0.500022292137146,
+  "OPINE": 0.4686158299446106
+ },
+ "nmse_split": {
+  "POD": 0.5607897639274597,
+  "CNN": 0.5496028661727905,
+  "OPINE": 0.5224781036376953
+ },
+ "figure1": {
+  "velocity_limit_U": 5.816255822181701,
+  "error_limit_E": 3.713342108726501,
+  "velocity_percentile": 99.0,
+  "error_percentile": 99.0,
+  "plane_index_k": 5,
+  "z_plus": 15.46875
+ },
+ "figure2": {
+  "iso_threshold_c_utau": 3.444039797782898,
+  "iso_percentile": 90.0,
+  "threshold_source": "90th-percentile-style quantile of |u'| in the GROUND TRUTH only, over the plotted slab; reused unchanged for every method",
+  "z_range_h": [
+   0.0,
+   0.40625
+  ],
+  "k_max": 26,
+  "z_plus_max": 73.125,
+  "camera_position": [
+   [
+    4.737133710219119,
+    -5.169616351823941,
+    3.2059569971068633
+   ],
+   [
+    1.5707963267948966,
+    0.7853981633974483,
+    0.203125
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "elev_deg": 24.0,
+  "azim_deg": -62.0,
+  "opacity": 1.0,
+  "colour_by": "z",
+  "colours": {
+   "positive_cmap": "jet 1.00-0.68",
+   "negative_cmap": "jet 0.00-0.35",
+   "clim_z_over_h": [
+    0.0,
+    0.5
+   ],
+   "clim_is": "an absolute z/h, not the plotted slab, so one colour means one height in every figure",
+   "_why": "wall distance ramps the lightness inside each sign's hue family, so the sign still reads and the crowded near-wall slab gains a depth cue"
+  },
+  "renderer": "pyvista 0.49.0 (off-screen VTK), marching cubes via contour()",
+  "isosurface_cells_per_method": {
+   "truth": 7478,
+   "pod": 2374,
+   "cnn": 3046,
+   "opine": 4272
+  },
+  "screenshot_px": 1500,
+  "parallel_scale": 1.5373143648280139,
+  "iso_zoom": 1.15
+ },
+ "figure_q": {
+  "q_threshold": 90.79430694580077,
+  "q_percentile_of_positive": 60.0,
+  "units": "(u_tau/h)^2",
+  "z_range_h": [
+   0.0,
+   0.40625
+  ],
+  "distribution_per_method": {
+   "Ground truth": {
+    "max": 2183.713623046875,
+    "min": -2103.9404296875,
+    "positive_fraction": 0.4198467548076923,
+    "p90_of_positive": 292.5056762695313,
+    "p99_of_positive": 746.2589019775377,
+    "rms": 174.45472717285156
+   },
+   "POD": {
+    "max": 305.10772705078125,
+    "min": -171.16232299804688,
+    "positive_fraction": 0.44692758413461536,
+    "p90_of_positive": 90.78749237060548,
+    "p99_of_positive": 184.3992791748047,
+    "rms": 48.289222717285156
+   },
+   "CNN": {
+    "max": 443.13653564453125,
+    "min": -266.0489501953125,
+    "positive_fraction": 0.39712289663461536,
+    "p90_of_positive": 122.34955596923832,
+    "p99_of_positive": 265.0062121582032,
+    "rms": 58.283687591552734
+   },
+   "OPINE": {
+    "max": 525.0516967773438,
+    "min": -383.02398681640625,
+    "positive_fraction": 0.40658804086538464,
+    "p90_of_positive": 118.98468322753907,
+    "p99_of_positive": 262.7636291503908,
+    "rms": 62.3908576965332
+   }
+  },
+  "surface_cells_per_method": {
+   "truth": 19615,
+   "pod": 4014,
+   "cnn": 5072,
+   "opine": 6188
+  },
+  "gradient_scheme": "periodic 2nd-order central in x and y, np.gradient in z (one-sided at the walls)",
+  "staggering_caveat": "u,v on the uv-grid and w on the w-grid are treated as co-located; a half-cell error in the w-derivatives, applied identically to all four fields",
+  "colour_by": "z",
+  "colour": {
+   "cmap": "jet",
+   "clim_z_over_h": [
+    0.0,
+    0.5
+   ],
+   "clim_is": "an absolute z/h, not the plotted slab, so one colour means one height in every figure",
+   "_why": "wall distance, a coordinate rather than a second field, so the surfaces sort front from back without the figure becoming about anything but vortices"
+  },
+  "opacity": 1.0
+ },
+ "figure3_diagnostic": {
+  "abs_error_limit_A": 4.0439715313911435,
+  "abs_error_percentile": 99.5,
+  "colormap": "magma",
+  "plane_index_k": 5
+ }
+}

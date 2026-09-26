@@ -1,0 +1,23 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: coupling_fine/D{D}/couplingyz_D{D}_results.json
+model:
+  n_blocks: 8
+  hidden: 64
+  s_max: 2.0
+  init_scale: 0.05
+  alpha: 0.03
+  rounds: 25
+  lr: 0.001
+  grad_clip: 1.0
+  seed: 42
+  bottleneck: banded
+  pad_mode: circular_y_zero_z
+train:
+  batch_size: 32
+  inner_epochs: 2
+  init_power: 12
+  subspace_source: full training split
+dofs: [32, 64, 128, 256, 512]   # stored rank == reported real dimension
+selection: validation NMSE only

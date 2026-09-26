@@ -1,0 +1,244 @@
+{
+ "_what": "png copies of the paper's figures; the source next to each experiment is authoritative, re-run scripts/collect_paper_figures.py after regenerating one",
+ "_formats": "png only here; the pdf / svg live at source_stem next to the experiment",
+ "figures": [
+  {
+   "name": "summary_channel_yz_D256",
+   "source_stem": "channel2d/main_figures/fig_summary2d_D256",
+   "source_mtime": 1790389971.3087091,
+   "source_png_sha256": "7868b82e8b9bd146eab658f40ea20dc9ceee380961a701d979093a9c1c344f29",
+   "provenance_source": "channel2d/main_figures/fig_summary2d_D256_provenance.json",
+   "files": [
+    "summary_channel_yz_D256.png"
+   ],
+   "dataset": "channel_yz",
+   "recon_plotted_D": 256,
+   "snapshot": 517
+  },
+  {
+   "name": "summary_channel3d_D256",
+   "source_stem": "minimal_channel3d/figures_paper/fig_summary3d_D256",
+   "source_mtime": 1790394270.0338795,
+   "source_png_sha256": "ae76294fa7ebb51829b167aff65d29af60e617d2fe8fa91e69ef969a318b8dac",
+   "provenance_source": "minimal_channel3d/figures_paper/fig_summary3d_D256_provenance.json",
+   "files": [
+    "summary_channel3d_D256.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 256,
+   "snapshot": 1659
+  },
+  {
+   "name": "summary_channel3d_D1024",
+   "source_stem": "minimal_channel3d/figures_paper/fig_summary3d_D1024",
+   "source_mtime": 1790394271.0789356,
+   "source_png_sha256": "bfc01474069aee40d3f31debb8b4c8bf9a1cf10f1946cd6906949c7eba1f28a9",
+   "provenance_source": "minimal_channel3d/figures_paper/fig_summary3d_D1024_provenance.json",
+   "files": [
+    "summary_channel3d_D1024.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 1024,
+   "snapshot": 912
+  },
+  {
+   "name": "summary_kolmogorov_D64",
+   "source_stem": "kolmogorov/figures_final/summary/summary_kolmogorov",
+   "source_mtime": 1790389886.141212,
+   "source_png_sha256": "a338808e1f007d53537c7fdb7904a82c165b11f02281cdf748bd2b68cde5d906",
+   "provenance_source": "kolmogorov/figures_final/summary/summary_kolmogorov_provenance.json",
+   "files": [
+    "summary_kolmogorov_D64.png"
+   ],
+   "dataset": "kolmogorov",
+   "recon_plotted_D": 64,
+   "snapshot": 6147
+  },
+  {
+   "name": "qcriterion_channel3d_D1024",
+   "source_stem": "minimal_channel3d/figures_paper/fig3_recon3d_D1024_qcriterion_p60",
+   "source_mtime": 1790390617.1530895,
+   "source_png_sha256": "0eb6518e41a3435eabe09b8cc3cb4779743c61fc7783b5b684246694503675f2",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D1024_provenance.json",
+   "files": [
+    "qcriterion_channel3d_D1024.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 1024,
+   "recon_stored_rank": {
+    "pod": 1024,
+    "opine": 1024,
+    "cnn": 1024
+   },
+   "snapshot": 912,
+   "note": "Q-criterion isosurface, one threshold for all four methods, taken as the 60th percentile of positive Q in the ground truth; see figure_q in the provenance.  A p90 rendering of the same snapshot exists next to the source if the surfaces are wanted sparser."
+  },
+  {
+   "name": "qcriterion_channel3d_D512",
+   "source_stem": "minimal_channel3d/figures_paper/fig3_recon3d_D512_qcriterion_p60",
+   "source_mtime": 1790390613.2638702,
+   "source_png_sha256": "2e511fe8c67f0816ca0c84d7badcd6097a7dd3b02bae553dab7dddacb91c8f52",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D512_provenance.json",
+   "files": [
+    "qcriterion_channel3d_D512.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 512,
+   "recon_stored_rank": {
+    "pod": 512,
+    "opine": 512,
+    "cnn": 512
+   },
+   "snapshot": 1666,
+   "note": "The Q-criterion figure at D=512.  Own snapshot, own threshold, both fixed from the ground truth exactly as at D=1024 -- each rung is internally fair rather than sharing a number across D."
+  },
+  {
+   "name": "qcriterion_channel3d_D256",
+   "source_stem": "minimal_channel3d/figures_paper/fig3_recon3d_D256_qcriterion_p60",
+   "source_mtime": 1790390609.4236536,
+   "source_png_sha256": "248898918bf1a0ae8994799c41125f7d8b934ce48d7603b85c989c760400d171",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D256_provenance.json",
+   "files": [
+    "qcriterion_channel3d_D256.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 256,
+   "recon_stored_rank": {
+    "pod": 256,
+    "opine": 256,
+    "cnn": 256
+   },
+   "snapshot": 1659,
+   "note": "The Q-criterion figure at D=256.  One of the four rungs -- 128, 256, 512, 1024 -- that let the gap between the methods be read against D.  Own snapshot, own threshold, both from the ground truth."
+  },
+  {
+   "name": "qcriterion_channel3d_D128",
+   "source_stem": "minimal_channel3d/figures_paper/fig3_recon3d_D128_qcriterion_p60",
+   "source_mtime": 1790390605.5474348,
+   "source_png_sha256": "f77d0aa5cb71def0c77e2271e0dee706c860482bca9b06ee33115aef231bf249",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D128_provenance.json",
+   "files": [
+    "qcriterion_channel3d_D128.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 128,
+   "recon_stored_rank": {
+    "pod": 128,
+    "opine": 128,
+    "cnn": 128
+   },
+   "snapshot": 1287,
+   "note": "The Q-criterion figure at D=128, the lowest of the four rungs.  Own snapshot, own threshold, both from the ground truth."
+  },
+  {
+   "name": "isosurface_uprime_channel3d_D1024",
+   "source_stem": "minimal_channel3d/figures_paper/fig2_recon3d_D1024_uprime_isosurface",
+   "source_mtime": 1790390616.5110533,
+   "source_png_sha256": "5eeafd7d4e905050b0b63179b8664d122d3d23cf7b08d90ff0f9251657e47691",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D1024_provenance.json",
+   "files": [
+    "isosurface_uprime_channel3d_D1024.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 1024,
+   "recon_stored_rank": {
+    "pod": 1024,
+    "opine": 1024,
+    "cnn": 1024
+   },
+   "snapshot": 912,
+   "note": "u' isosurfaces at +/- the same threshold for all four methods, the warm half of jet for positive and the cool half for negative, each ramped by wall-normal position over z/h in [0,0.5]; see figure2 in the provenance.  Same snapshot, camera and crop as the Q-criterion figure, which takes the whole of jet because Q has no sign to carry."
+  },
+  {
+   "name": "isosurface_uprime_channel3d_D512",
+   "source_stem": "minimal_channel3d/figures_paper/fig2_recon3d_D512_uprime_isosurface",
+   "source_mtime": 1790390612.6668365,
+   "source_png_sha256": "046ddf36ace651db51caf94fcca5202e6528024af387f73743e2898c7493f5dc",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D512_provenance.json",
+   "files": [
+    "isosurface_uprime_channel3d_D512.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 512,
+   "recon_stored_rank": {
+    "pod": 512,
+    "opine": 512,
+    "cnn": 512
+   },
+   "snapshot": 1666,
+   "note": "The u' isosurface figure at D=512, one of the four rungs that pair with the Q-criterion series.  Same jet halves and z/h in [0,0.5]; own snapshot and own threshold, both from the ground truth."
+  },
+  {
+   "name": "isosurface_uprime_channel3d_D256",
+   "source_stem": "minimal_channel3d/figures_paper/fig2_recon3d_D256_uprime_isosurface",
+   "source_mtime": 1790390608.8386207,
+   "source_png_sha256": "0c93357b74c717cab25a4a5af91e309ee2375bbf88e4226d30762eb51d4e3c6b",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D256_provenance.json",
+   "files": [
+    "isosurface_uprime_channel3d_D256.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 256,
+   "recon_stored_rank": {
+    "pod": 256,
+    "opine": 256,
+    "cnn": 256
+   },
+   "snapshot": 1659,
+   "note": "The u' isosurface figure at D=256, one of the four rungs that pair with the Q-criterion series.  Same jet halves and z/h in [0,0.5]; own snapshot and own threshold, both from the ground truth."
+  },
+  {
+   "name": "isosurface_uprime_channel3d_D128",
+   "source_stem": "minimal_channel3d/figures_paper/fig2_recon3d_D128_uprime_isosurface",
+   "source_mtime": 1790390604.9694023,
+   "source_png_sha256": "feb73bd7360aec33a79166bb4be73b64f24a3ec75f033ab17faa301e9f6d28b6",
+   "provenance_source": "minimal_channel3d/figures_paper/paper_figures_D128_provenance.json",
+   "files": [
+    "isosurface_uprime_channel3d_D128.png"
+   ],
+   "dataset": "channel3d",
+   "recon_plotted_D": 128,
+   "recon_stored_rank": {
+    "pod": 128,
+    "opine": 128,
+    "cnn": 128
+   },
+   "snapshot": 1287,
+   "note": "The u' isosurface figure at D=128, one of the four rungs that pair with the Q-criterion series.  Same jet halves and z/h in [0,0.5]; own snapshot and own threshold, both from the ground truth."
+  },
+  {
+   "name": "isosurface_uprime_channel_yz_D256",
+   "source_stem": "channel2d/main_figures/fig_volume_isosurface_D256",
+   "source_mtime": 1790390374.589066,
+   "source_png_sha256": "7a46ddb851098f533c2e6fae04105cbf183f44e5bfc905fafdcd5bf7dd231342",
+   "provenance_source": "channel2d/main_figures/fig_volume_isosurface_D256_provenance.json",
+   "files": [
+    "isosurface_uprime_channel_yz_D256.png"
+   ],
+   "dataset": "channel_yz",
+   "recon_plotted_D": 256,
+   "recon_stored_rank": {
+    "POD": 256,
+    "OPINE": 256,
+    "CNN": 256
+   },
+   "snapshot": null,
+   "note": "u' isosurfaces of ONE DNS snapshot whose 256 x-planes were each reconstructed independently by the y-z models, then stacked.  Nothing in POD, the CNN or OPINE couples neighbouring planes, so the streamwise coherence of these surfaces is earned rather than built in.  Same threshold, camera and z/h in [0,0.5] jet colouring as the 3-D isosurfaces."
+  },
+  {
+   "name": "latent_directions_kolmogorov_D64",
+   "source_stem": "kolmogorov/figures_final/latent_directions/kolmogorov_latent_directions",
+   "source_mtime": 1790392649.8054738,
+   "source_png_sha256": "f4bb7ace19726addf804f7515b7a8fac14cc8ba85868578ec8d56db70a58d6a9",
+   "provenance_source": "kolmogorov/figures_final/latent_directions/kolmogorov_latent_directions_provenance.json",
+   "files": [
+    "latent_directions_kolmogorov_D64.png"
+   ],
+   "dataset": "kolmogorov",
+   "recon_plotted_D": 64,
+   "recon_stored_rank": null,
+   "snapshot": null,
+   "note": "decoded latent directions: one reduced coordinate of each method activated at one training standard deviation and mapped back to the vorticity plane.  Rows POD / CNN / OPINE, columns the four leading directions, all three methods at the real dimension D=64.  POD comes from the exact basis and its leading directions do not move with the truncation rank.  Deliberately separate from the summary figure."
+  }
+ ]
+}

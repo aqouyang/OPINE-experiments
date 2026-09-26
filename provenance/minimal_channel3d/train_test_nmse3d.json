@@ -1,0 +1,183 @@
+{
+ "_metric": "sum((xhat-x)^2)/sum(x^2), whole split, normalized units",
+ "_splits": {
+  "train": 16000,
+  "val": 2000,
+  "test": 2000
+ },
+ "_pod": "exact snapshot POD of the full training split",
+ "_opine": "opine_full_D{D}",
+ "rows": [
+  {
+   "dof": 16,
+   "POD": {
+    "train": 0.781004796723707,
+    "val": 0.7832482971873842,
+    "test": 0.7826941630046923
+   },
+   "CNN": {
+    "train": 0.7410351457795634,
+    "val": 0.7518603633916106,
+    "test": 0.7519927656801338,
+    "n_params": 2492659,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D16/CNN3D16_best.pt"
+   }
+  },
+  {
+   "dof": 32,
+   "POD": {
+    "train": 0.7106035385735013,
+    "val": 0.7131536652489712,
+    "test": 0.7133454736268483
+   },
+   "OPINE": {
+    "train": 0.6880807708585269,
+    "val": 0.6905029570731532,
+    "test": 0.6910221709208016,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D32/opine3d_D32_best.pt"
+   },
+   "CNN": {
+    "train": 0.6799829321045262,
+    "val": 0.6973220598217919,
+    "test": 0.6970677817199463,
+    "n_params": 2623747,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D32/CNN3D32_best.pt"
+   }
+  },
+  {
+   "dof": 64,
+   "POD": {
+    "train": 0.6360739965982698,
+    "val": 0.6416210565462079,
+    "test": 0.6413904975545568
+   },
+   "OPINE": {
+    "train": 0.6016317823790621,
+    "val": 0.6077268877213716,
+    "test": 0.6075180927132188,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D64/opine3d_D64_best.pt"
+   },
+   "CNN": {
+    "train": 0.6110761401946082,
+    "val": 0.6354913551395848,
+    "test": 0.6347271856485712,
+    "n_params": 2885923,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D64/CNN3D64_best.pt"
+   }
+  },
+  {
+   "dof": 128,
+   "POD": {
+    "train": 0.5513168647967579,
+    "val": 0.561405183649704,
+    "test": 0.5607910833920039
+   },
+   "OPINE": {
+    "train": 0.5113368267452254,
+    "val": 0.5231239875515518,
+    "test": 0.5224808377649941,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D128/opine3d_D128_best.pt"
+   },
+   "CNN": {
+    "train": 0.5222148830570135,
+    "val": 0.5502557942448132,
+    "test": 0.5496041259925768,
+    "n_params": 3410275,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D128/CNN3D128_best.pt"
+   }
+  },
+  {
+   "dof": 256,
+   "POD": {
+    "train": 0.46264031225039726,
+    "val": 0.4814288007781735,
+    "test": 0.48032201025311083
+   },
+   "OPINE": {
+    "train": 0.4194225538606744,
+    "val": 0.44053544861215516,
+    "test": 0.4395525418590754,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D256/opine3d_D256_best.pt"
+   },
+   "CNN": {
+    "train": 0.4567730829923314,
+    "val": 0.5102336271390918,
+    "test": 0.5086455572742418,
+    "n_params": 4458979,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D256/CNN3D256_best.pt"
+   }
+  },
+  {
+   "dof": 512,
+   "POD": {
+    "train": 0.36642348327514707,
+    "val": 0.3981420483275679,
+    "test": 0.39710764159309986
+   },
+   "OPINE": {
+    "train": 0.3215574270451539,
+    "val": 0.35736816697879326,
+    "test": 0.35632163368865444,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D512/opine3d_D512_best.pt"
+   },
+   "CNN": {
+    "train": 0.4374996601901252,
+    "val": 0.4956068669830559,
+    "test": 0.4941965262991326,
+    "n_params": 6556387,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D512/CNN3D512_best.pt"
+   }
+  },
+  {
+   "dof": 1024,
+   "POD": {
+    "train": 0.26633998894496064,
+    "val": 0.31496229626452715,
+    "test": 0.31380331705394787
+   },
+   "OPINE": {
+    "train": 0.22417359121216723,
+    "val": 0.27798876910900755,
+    "test": 0.27661671674545946,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D1024/opine3d_D1024_best.pt"
+   },
+   "CNN": {
+    "train": 0.4384816968718523,
+    "val": 0.4985158167092493,
+    "test": 0.49729134449859985,
+    "n_params": 10751203,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D1024/CNN3D1024_best.pt"
+   }
+  },
+  {
+   "dof": 2048,
+   "POD": {
+    "train": 0.168938401865853,
+    "val": 0.23725747288767757,
+    "test": 0.23624450320360071
+   },
+   "OPINE": {
+    "train": 0.13463130559496772,
+    "val": 0.20518878484032102,
+    "test": 0.20416024572005576,
+    "n_params": 96192,
+    "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D2048/opine3d_D2048_best.pt"
+   },
+   "CNN": {
+    "train": 0.4447877198910365,
+    "val": 0.4908900965330271,
+    "test": 0.48955320796149493,
+    "n_params": 19140835,
+    "checkpoint": "${DATA_ROOT}/channel3d/cnn_D2048_earlystop/CNN3D2048_best.pt",
+    "_protocol": "EARLY STOPPED at epoch 30 of 50 (best epoch 29), when the best validation NMSE had improved by less than 0.002 over three epochs.  Every other CNN rung ran the full 50-epoch cosine schedule, so this point is not on the same budget"
+   }
+  }
+ ],
+ "_cnn_2048_note": "EARLY STOPPED at epoch 30 of 50 (best epoch 29), when the best validation NMSE had improved by less than 0.002 over three epochs.  Every other CNN rung ran the full 50-epoch cosine schedule, so this point is not on the same budget"
+}

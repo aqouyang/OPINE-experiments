@@ -1,0 +1,6 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_definition: exact snapshot POD of the full 16000-sample training split, one decomposition sliced to every rank
+pairing: statistical, not enforced
+reported_dimension: retained real rank

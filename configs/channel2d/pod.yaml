@@ -1,0 +1,6 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_definition: JointSymmetryPOD: FFT in y, per-k_y Hermitian joint covariance over 3 components x N_z
+pairing: enforced by construction (whole k_y bands)
+reported_dimension: retained real rank

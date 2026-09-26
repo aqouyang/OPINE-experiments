@@ -1,0 +1,9 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: toy1d_tanh/iid_results.json
+problem: tanh bump on a periodic line, phase drawn iid uniform
+dof: 2
+n_seeds: 10
+n_train: 20000
+n_test: 2000

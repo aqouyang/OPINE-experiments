@@ -1,0 +1,21 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: cnn_D{D}/cnn3d_D{D}_results.json
+model:
+  name: JointCNN3D
+  base_channels: 32
+  num_down: 4
+  padding: x,y circular; z zero (architectural, not a BC)
+train:
+  epochs: 50
+  lr: 0.001
+  batch_size: 32
+  eval_batch: 64
+  optimizer: AdamW
+  scheduler: CosineAnnealingLR
+  seed: 42
+  preload: 1
+dofs: [16, 32, 64, 128, 256, 512, 1024, 2048]
+selection: validation NMSE only
+_note: D=2048 in the shipped table is EARLY STOPPED at epoch 30; every other rung ran the full 50

@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Datasets and trained checkpoints are not distributed; see docs/DATASETS.md
+data/
+*.npy
+*.npz
+*.pt
+*.pth
+!provenance/**/*.json
+
+# Run outputs
+outputs/
+runs/
+logs/
+slurm-*.out

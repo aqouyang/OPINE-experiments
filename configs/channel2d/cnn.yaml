@@ -1,0 +1,16 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: safe_mean_rerun/cnn_reference*/cnn_convergence_audit.json
+model:
+  name: JointCNN_YZ
+  padding: y circular, z zero
+train:
+  epochs: 50
+  lr: 0.001
+  batch_size: 32
+  optimizer: AdamW
+  scheduler: CosineAnnealingLR
+  seed: 42
+dofs: [16, 32, 64, 128, 256, 512]   # latent width
+selection: validation normalized-MSE only

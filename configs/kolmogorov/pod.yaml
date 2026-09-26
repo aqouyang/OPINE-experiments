@@ -1,0 +1,6 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_definition: unrestricted global POD, exact eigh of the 16384^2 spatial covariance
+pairing: statistical, not enforced
+reported_dimension: retained real rank

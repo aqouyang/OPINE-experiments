@@ -1,0 +1,23 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: results/coupling_fine_D{D}/coupling_D{D}_results.json
+model:
+  n_blocks: 8
+  hidden: 64
+  s_max: 2.0
+  init_scale: 0.05
+  alpha: 0.03
+  rounds: 25
+  lr: 0.001
+  grad_clip: 1.0
+  seed: 42
+  bottleneck: unrestricted
+  pad_mode: circular_both
+train:
+  batch_size: 64
+  inner_epochs: 1
+  latent_subsample: 20000
+  init: exact POD basis from pod_basis.npz (no power iteration)
+dofs: [32, 64, 128, 256, 512]
+selection: validation NMSE only

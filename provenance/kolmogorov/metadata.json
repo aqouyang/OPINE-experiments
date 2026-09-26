@@ -1,0 +1,55 @@
+{
+  "paper": "Cleary, Wang & Zaki, arXiv:2512.15470",
+  "equation": "d_t omega + u.grad omega = (1/Re) lap(omega) - k_f cos(k_f y)",
+  "reynolds_number": 100.0,
+  "viscosity_1_over_Re": 0.01,
+  "forcing_wavenumber_k_f": 4,
+  "forcing_scale": 1.0,
+  "drag": 0.0,
+  "domain": [
+    [
+      0.0,
+      6.283185307179586
+    ],
+    [
+      0.0,
+      6.283185307179586
+    ]
+  ],
+  "domain_note": "L=2pi is forced by periodicity of sin(k_f y) with integer k_f, not chosen freely",
+  "grid": [
+    128,
+    128
+  ],
+  "boundary_conditions": "doubly periodic",
+  "solver": "jax_cfd.spectral.equations.NavierStokes2D (pseudospectral)",
+  "dealiasing": "2/3-rule (smooth=True)",
+  "time_integrator": "crank_nicolson_rk4 (Carpenter-Kennedy low-storage RK4 explicit / Crank-Nicolson implicit)",
+  "dt": 0.001953125,
+  "dt_note": "dt = 1/512; one advective time unit is exactly 512 steps, so snapshot spacing is exact",
+  "steps_per_snapshot": 512,
+  "burn_in_time": 100.0,
+  "burn_in_steps": 51200,
+  "n_snapshots_per_trajectory": 1000,
+  "snapshot_interval": 1.0,
+  "first_snapshot_time": 100.0,
+  "last_snapshot_time": 1099.0,
+  "initial_condition": "jax_cfd.initial_conditions.filtered_velocity_field then curl_2d",
+  "ic_max_velocity": 7.0,
+  "ic_peak_wavenumber": 4,
+  "seed_convention": "trajectory i uses PRNGKey(0 + i)",
+  "seed_base": 0,
+  "solver_precision": "float64",
+  "storage_dtype": "float32",
+  "stored_quantity": "out-of-plane vorticity omega(x, y)",
+  "dissipation_definition": "D = <omega^2>/Re, stored per snapshot in diag_XXX.npz",
+  "resampling": "none; raw uniform time sampling",
+  "advective_stable_dt_at_max_speed_10": 0.002454369260617026,
+  "versions": {
+    "jax": "0.10.2",
+    "jaxlib": "0.10.2",
+    "jax_cfd": "0.2.1",
+    "numpy": "2.4.6",
+    "python": "3.11.15"
+  }
+}

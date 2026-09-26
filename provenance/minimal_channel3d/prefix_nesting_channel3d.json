@@ -1,0 +1,56 @@
+{
+ "checkpoint": "${DATA_ROOT}/channel3d/opine_full_D2048/opine3d_D2048_best.pt",
+ "K": 2048,
+ "rows": [
+  {
+   "stored_rank": 32,
+   "reported_D": 16,
+   "prefix_raw": 0.7100614166896397,
+   "prefix_varordered": 0.7097550895809673,
+   "energy_frac": 0.4341601494214835
+  },
+  {
+   "stored_rank": 64,
+   "reported_D": 32,
+   "prefix_raw": 0.6346984819329818,
+   "prefix_varordered": 0.6342104450304946,
+   "energy_frac": 0.5348423014041112
+  },
+  {
+   "stored_rank": 128,
+   "reported_D": 64,
+   "prefix_raw": 0.54858343302174,
+   "prefix_varordered": 0.5468179689713671,
+   "energy_frac": 0.6414841698115458
+  },
+  {
+   "stored_rank": 256,
+   "reported_D": 128,
+   "prefix_raw": 0.46193871756235433,
+   "prefix_varordered": 0.4600177930839719,
+   "energy_frac": 0.7426629726579258
+  },
+  {
+   "stored_rank": 512,
+   "reported_D": 256,
+   "prefix_raw": 0.3718882395233501,
+   "prefix_varordered": 0.36886032641357275,
+   "energy_frac": 0.8406670288599655
+  },
+  {
+   "stored_rank": 1024,
+   "reported_D": 512,
+   "prefix_raw": 0.28337162208923605,
+   "prefix_varordered": 0.27964515566134723,
+   "energy_frac": 0.9284813449769963
+  },
+  {
+   "stored_rank": 2048,
+   "reported_D": 1024,
+   "prefix_raw": 0.20416921797583082,
+   "prefix_varordered": 0.20416921247727823,
+   "energy_frac": 1.0
+  }
+ ],
+ "raw_column_variance_inversions": 931
+}

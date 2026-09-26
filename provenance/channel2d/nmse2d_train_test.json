@@ -1,0 +1,163 @@
+{
+ "_metric": "sum((xhat-x)^2)/sum(x^2), whole split at once",
+ "_splits": {
+  "train": 2940,
+  "val": 630,
+  "test": 631
+ },
+ "_excluded": [
+  "Original FINE",
+  "iResNet FINE",
+  "unrestricted POD"
+ ],
+ "_pod_definition": "POD means SymPOD-safe throughout; the unrestricted variant is not a baseline",
+ "_sources": {
+  "POD/CNN": "channel2d/safe_mean_rerun/cnn_diagnosis/cnn_d256_diagnosis.json",
+  "OPINE": "${DATA_ROOT}/channel2d/coupling_fine"
+ },
+ "_dimension_convention": {
+  "POD": "reported D = retained real rank",
+  "OPINE": "reported D = retained real rank",
+  "CNN": "reported D = latent dimension",
+  "_why": "the retained real dimension is reported directly for every method.  The earlier D = stored rank / 2 mode-pair convention is withdrawn: the pairing is enforced by construction only in the banded y-z bottleneck, and elsewhere it is a finite-sample property of the empirical covariance rather than a guaranteed one, which is not a sufficient basis for halving a reported dimension."
+ },
+ "rows": [
+  {
+   "dof": 16,
+   "POD": {
+    "train": 0.6957540684758569,
+    "val": 0.6944007614920816,
+    "test": 0.6945202543494221,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.6532924758703577,
+    "val": 0.6908401932110304,
+    "test": 0.6919850421632795,
+    "n_params": 1057651,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference/CNN16_best.pt"
+   }
+  },
+  {
+   "dof": 32,
+   "POD": {
+    "train": 0.5500797730279845,
+    "val": 0.5465652829785286,
+    "test": 0.5488478423343922,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.5027127650411511,
+    "val": 0.5507829792495719,
+    "test": 0.5483849988314303,
+    "n_params": 1319811,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference/CNN32_best.pt"
+   },
+   "OPINE": {
+    "train": 0.5302199885697988,
+    "val": 0.5283325770471327,
+    "test": 0.5308330187888259,
+    "n_params": 54720,
+    "best_round": 25
+   }
+  },
+  {
+   "dof": 64,
+   "POD": {
+    "train": 0.39128079208453925,
+    "val": 0.39129711034977804,
+    "test": 0.3915745116529362,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.3384943480161294,
+    "val": 0.39074077256299306,
+    "test": 0.39036592608411863,
+    "n_params": 1844131,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference/CNN64_best.pt"
+   },
+   "OPINE": {
+    "train": 0.3566931439810281,
+    "val": 0.3592289157222249,
+    "test": 0.35972643529091347,
+    "n_params": 54720,
+    "best_round": 23
+   }
+  },
+  {
+   "dof": 128,
+   "POD": {
+    "train": 0.24168042287223301,
+    "val": 0.24398816184874575,
+    "test": 0.2411791898874537,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.19429856747011087,
+    "val": 0.2560664715611205,
+    "test": 0.2577932353408458,
+    "n_params": 2892771,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference/CNN128_best.pt"
+   },
+   "OPINE": {
+    "train": 0.20777615853192052,
+    "val": 0.2104873383375612,
+    "test": 0.20889324794560277,
+    "n_params": 54720,
+    "best_round": 25
+   }
+  },
+  {
+   "dof": 256,
+   "POD": {
+    "train": 0.11882725268951813,
+    "val": 0.11940303264799712,
+    "test": 0.11789733238031672,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.07501872442215882,
+    "val": 0.18843068058670012,
+    "test": 0.1867082204377811,
+    "n_params": 4990051,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference_d256/CNN256_best.pt"
+   },
+   "OPINE": {
+    "train": 0.09721255193830432,
+    "val": 0.09831718952628658,
+    "test": 0.0970972657804341,
+    "n_params": 54720,
+    "best_round": 25
+   }
+  },
+  {
+   "dof": 512,
+   "POD": {
+    "train": 0.04440207232724171,
+    "val": 0.04453242992626064,
+    "test": 0.0441640219495019,
+    "n_params": 0,
+    "variant": "SymPOD-safe (the POD baseline)"
+   },
+   "CNN": {
+    "train": 0.056529160299777406,
+    "val": 0.168395015452488,
+    "test": 0.16755088272952307,
+    "n_params": 9184611,
+    "checkpoint": "${RUNS_ROOT}/channel2d/safe_mean_rerun/cnn_reference/CNN512_best.pt"
+   },
+   "OPINE": {
+    "train": 0.033494498959957285,
+    "val": 0.033966798342563796,
+    "test": 0.033580766848276405,
+    "n_params": 54720,
+    "best_round": 25
+   }
+  }
+ ]
+}

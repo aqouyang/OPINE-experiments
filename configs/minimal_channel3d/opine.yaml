@@ -1,0 +1,23 @@
+# Transcribed verbatim from the config block recorded by the run that
+# produced the reported result.  Changing a value here means you are
+# no longer reproducing the paper.
+_source: opine_full_D{D}/opine3d_D{D}_results.json
+model:
+  n_blocks: 8
+  hidden: 64
+  s_max: 2.0
+  init_scale: 0.05
+  alpha: 0.03
+  rounds: 25
+  lr: 0.001
+  grad_clip: 1.0
+  seed: 42
+  bottleneck: unrestricted
+train:
+  batch_size: 16
+  sub_batch: 32
+  inner_epochs: 1
+  init_power: 12
+  subspace_subsample: 16000
+dofs: [32, 64, 128, 256, 512, 1024, 2048]
+selection: validation NMSE only
